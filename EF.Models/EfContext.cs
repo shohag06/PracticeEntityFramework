@@ -7,9 +7,15 @@ namespace EF.Models
 {
     class EfContext:DbContext
     {
-        public EfContext():base("EfContext")
-        {
+        //public EfContext():base("EfContext")
+        //{
 
+        //}
+        public EfContext(DbContextOptions<EfContext> options):base(options)
+        {
         }
+        public DbSet<Animal> Animals { get; set; }
+
+
     }
 }
